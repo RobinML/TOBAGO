@@ -4,6 +4,7 @@ public class ControlGroup {
 
     private Model model;
     private Vue vue;
+    private ControlBouton cb;
 
     public ControlGroup(Model model) {
 
@@ -12,5 +13,7 @@ public class ControlGroup {
         this.vue = new Vue(model);
 
         this.vue.display();
+
+        cb = new ControlBouton(model, vue);
     }
 }
